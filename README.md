@@ -11,7 +11,7 @@ First I have done docker, kubectl and minikube setups on my computer.
 
 Next I have used that command for create a pod;
 
-> kubectl apply -f podmulticontainer.yaml
+> kubectl apply -f pod.yaml
 
 after that I have used that command for port forward
 
