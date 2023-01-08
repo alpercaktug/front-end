@@ -4,14 +4,14 @@ metadata:
   name: multicontainer
 spec:
   containers:
-  - name: webcontainer
+  - name: nginx-container
     image: nginx
     ports:
       - containerPort: 80
     volumeMounts:
     - name: sharedvolume
       mountPath: /usr/share/nginx/html
-  - name: sidecarcontainer
+  - name: busybox-container
     image: busybox
     command: ["/bin/sh"]
     args: ["-c", "while true; do wget -O /var/log/index.html https://raw.githubusercontent.com/alpercaktug/front-end/main/index.html; sleep 15; done"]
